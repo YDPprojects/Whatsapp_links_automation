@@ -15,7 +15,7 @@ def is_date(string, fuzzy=False):
         return False
 # # downloading files from google drive
 # import gdown
-# url = 'https://drive.google.com/uc?id=1qZs7zZQ90w9jtZF4ptMHmgrW0KbqLEU5'
+# url = 'https://drive.google.com/drive/folders/1Ik_DZsRcyPwa7hD-LTqwkJbUUsO_U_mM?usp=sharing'
 # output = 'WhatsApp Chat with Young Data Professionals.txt'
 # gdown.download(url, output, quiet=False)
 
