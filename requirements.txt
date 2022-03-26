@@ -1,5 +1,6 @@
 pandas
 requests
 gdown
-python-dateutilregex
+python-dateutil
+regex
 
