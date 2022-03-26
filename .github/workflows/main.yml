@@ -1,0 +1,39 @@
+name: Whatsapplink scrape
+
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron:  '0 10 * * 6'
+
+jobs:
+  autoscrape:
+    # The type of runner that the job will run on
+    runs-on: macos-latest   
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.7'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        
+    - name: Fetch latest data
+      run: python automate_download.py
+    - name: Commit and push if it changed
+      run: |-
+        git config --local user.name actions-user
+        git config --local user.email "actions@github.com"
+        git add -A
+        timestamp=$(date -u)
+        git commit -am "ACTION Headlines $(timestamp)" || exit 0
+        git push
+      env:
+        REPO_KEY: ${{secrets.GITHUB_TOKEN}}
+        username: github-actions
