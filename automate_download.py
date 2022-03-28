@@ -145,7 +145,7 @@ def export_link(df):
 
 ## Load Whatsapp chat saved in google drive
 try:
-    url = 'https://drive.google.com/drive/folders/1YRKcXfLnFtQBTq68O4QiaUwtN7dz-Y8p?usp=sharing'
+    url = 'https://drive.google.com/drive/folders/15BGSF7Xvv4nbd9rVI9ooJSToaAWLQAx5?usp=sharing'
     
     files = gdown.download_folder(url)
 
