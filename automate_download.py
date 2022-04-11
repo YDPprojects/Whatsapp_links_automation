@@ -183,11 +183,11 @@ else:
 
             groups = ["data analytics", "data engineering", "machine learning",
                         "onyeka", "data analysis", "powerbi|power bi",
-                        "excel", "sql"]
+                        "excel", "sql", "python", "dbt", "apache", "etl"]
 
             save_to = ["data analytics", "data engineering", "machine learning",
                         "finance", "data analysis", "powerbi",
-                        "ms excel", "sql"]
+                        "ms excel", "sql", "python", "dbt", "apache", "etl"]
 
             if (len(groups) == len(save_to)):
 
